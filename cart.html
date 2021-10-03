@@ -1525,7 +1525,7 @@
     
     let addtocart_btn = document.createElement("button");
    
-    addtocart_btn.innerText ="D"
+    addtocart_btn.innerText =""
     addtocart_btn.style.margin ="30px";
     addtocart_btn.style.height = "20px";
     addtocart_btn.style.width = "20px";
@@ -1542,13 +1542,13 @@
 
   });
   function addtocart_btn(){
-    remove()
+    remove(div)
    }
 
   c = 0;
   for (i = 0; i < cart.length; i++) {
     n = Number(cart[i].price);
-    c += Math.ceil(n)
+    c += Math.ceil(n) * 70;
   }
   document.getElementById("ordervalue").textContent = "Rs." + c;
 
@@ -1562,7 +1562,7 @@
 
   function add() {
     var a = document.getElementById("coupon").value;
-    var b = "ABC";
+    var b = "masai30";
     var succ = document.getElementById("succ");
     succ.width = "300px";
 
