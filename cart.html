@@ -405,7 +405,7 @@
       </a>
       <button onclick="add()" style="width:250px;height:40px;margin:10px"><img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh_bEuhe4MNUqiZ-VBV2bYsuEJQqM_4MfYzQ&usqp=CAU"
-          width=15px;padding:10px />Delivery and return options ></button>
+          width=15px;padding:10px />Delivery and return options></button>
     </div>
 
 </body>
@@ -1576,11 +1576,37 @@
 
 
     if (a == b) {
-      alert("Coupon Code Applied Successfully");
-      succ.append(m);
+      
+      // succ.append(m);
+      c = 0;
+  for (i = 0; i < cart.length; i++) {
+    n = Number(cart[i].price);
+    c += Math.ceil(n) * 70;
+    c = c-(c/10)
+  }
+  document.getElementById("ordervalue").textContent = "Rs." + c;
+
+  var d = 148;
+  var e = 148 + c;
+
+  document.getElementById("total").textContent = "Rs." + e;
+  alert("Coupon Code Applied Successfully");
     } else {
-      alert("Invalid Coupon Code");
-      succ.append(n);
+      
+      // succ.append(n);
+      c = 0;
+  for (i = 0; i < cart.length; i++) {
+    n = Number(cart[i].price);
+    c += Math.ceil(n) * 70;
+    c = c
+  }
+  document.getElementById("ordervalue").textContent = "Rs." + c;
+
+  var d = 148;
+  var e = 148 + c;
+
+  document.getElementById("total").textContent = "Rs." + e;
+  alert("Invalid Coupon Code");
     }
 
 
